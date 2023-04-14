@@ -1,0 +1,33 @@
+{
+  "pages": [
+      "pages/chat/index",
+      "pages/index/index",
+      "pages/logs/logs"
+
+  ],
+  "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "ChatGPT",
+      "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+      "weui": true
+  },
+  "tabBar": {
+      "color": "#1485EE",
+      "selectedColor": "#FF514E",
+      "list": [
+          {
+              "pagePath": "pages/chat/index",
+              "text": "ChatGPT概览"
+          },
+          {
+              "pagePath": "pages/index/index",
+              "text": "我的创作"
+          }
+      ]
+  }
+}

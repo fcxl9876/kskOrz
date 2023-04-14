@@ -1,0 +1,37 @@
+<!--pages/chat/index.wxml-->
+<form bindsubmit="submitForm">
+  <view class="weui-form">
+    <view class="weui-cells__title">请输入你想要解决的问题：</view>
+    <view class="weui-cells">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea name="q" class="weui-textarea" placeholder="可以问我今天天气怎么样？或者讲个故事" rows="2"></textarea>
+          <div class="weui-textarea-counter"><span>0</span>/50</div>
+        </div>
+      </div>
+      <block wx:if="{{result}}">
+        <view class="weui-cells__title">回复：</view>
+          <view class="usermotto">
+            <text class="user-motto">{{result}}</text>
+          </view>
+      </block>
+    </view>
+    <view class="weui-form__tips-area">
+      <block wx:if="{{downloadUrl}}">
+        <view class="weui-cell">
+          <button disabled="{{downloaddisabled}}" loading="{{downloadloading}}" load aria-role="button" bindtap='download'  data-text="{{downloadUrl}}" plain>立即下载
+          </button>
+        </view>
+      </block>
+      <block wx:if="{{message}}">
+        <view class="weui-form__tips">
+            {{message}}
+        </view>
+      </block>
+    </view>
+    <view class="weui-form__opr-area">
+      <button aria-role="button" class="weui-btn weui-btn_primary" disabled="{{disabled}}" loading="{{loading}}" form-type="submit"> 询问ChatGPT
+      </button>
+    </view>
+  </view>
+</form>
