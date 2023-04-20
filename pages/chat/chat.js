@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputVal:null
+  },
 
+  bindTextAreaBlur: function(e) {
+    this.setData({
+      inputVal:e.detail.value
+    }) 
   },
 
   submitForm: function (e) {
@@ -14,14 +20,14 @@ Page({
     
     const that = this
     wx.request({
-        url: 'https://api.fcxl9876.xin/chatgpt',
+        url: 'https://api.fcxl9876.xin/miniapp/chatGPT',
         method: 'post',
         header: {"content-type": "application/x-www-form-urlencoded"},
-        data: data,
+        data: "{\"askStr\":"+that.data.inputVal+"\"}",
         success(rsp) {
             console.log("ask result-----",rsp.data)
             that.setData({
-                result: rsp.data.data.rsp,
+                result: rsp.data.replyStr,
                 disabled: false,
                 loading: false,
             })

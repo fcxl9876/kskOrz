@@ -1,14 +1,13 @@
 {
   "pages": [
-      "pages/chat/index",
+      "pages/chat/chat",
       "pages/index/index",
       "pages/logs/logs"
-
   ],
   "window": {
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#fff",
-      "navigationBarTitleText": "ChatGPT",
+      "navigationBarTitleText": "快闪开我按错了Orz",
       "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -17,16 +16,20 @@
       "weui": true
   },
   "tabBar": {
-      "color": "#1485EE",
-      "selectedColor": "#FF514E",
+      "color": "#000000",
+      "selectedColor": "#66CCFF",
       "list": [
           {
-              "pagePath": "pages/chat/index",
-              "text": "ChatGPT概览"
+              "pagePath": "pages/chat/chat",
+              "text": "ChatGPT概览",
+              "iconPath":"/content/img/ChatGPT.png",
+              "selectedIconPath":"/content/img/ChatGPT_select.png"
           },
           {
               "pagePath": "pages/index/index",
-              "text": "我的创作"
+              "text": "测试页面",
+              "iconPath":"/content/img/我的.png",
+              "selectedIconPath":"/content/img/我的_select.png"
           }
       ]
   }
