@@ -5,7 +5,7 @@
     <view class="weui-cells">
       <div class="weui-cell">
         <div class="weui-cell__bd">
-          <textarea name="q" class="weui-textarea" placeholder="可以问我今天天气怎么样？或者讲个故事" rows="2"></textarea>
+          <textarea name="q" bindblur="bindTextAreaBlur" class="weui-textarea" placeholder="可以问我今天天气怎么样？或者讲个故事" rows="2"></textarea>
           <div class="weui-textarea-counter"><span>0</span>/50</div>
         </div>
       </div>
